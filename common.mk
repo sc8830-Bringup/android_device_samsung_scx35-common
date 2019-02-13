@@ -78,6 +78,7 @@ PRODUCT_PACKAGES += \
 	librilutils \
 	libril_shim \
 	libgps_shim \
+	libC \
 	libphoneserver_shim
 
 # RIL
