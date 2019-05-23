@@ -97,8 +97,6 @@ PRODUCT_PACKAGES += \
 	kill_phone.rc \
 	macloader.rc \
 	mediacodec.rc \
-	#modem_control.rc \
-	#modemd.rc \
 	nvitemd.rc \
 	p2p_supplicant.rc \
 	phoneserver.rc \
