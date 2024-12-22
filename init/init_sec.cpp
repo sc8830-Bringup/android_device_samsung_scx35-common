@@ -50,6 +50,9 @@ enum device_variant {
 	G361H,
 	G531BT,
 	G531H,
+        T113,
+        T113NU,
+        T116,
 	DEVICE_UNSUPPORTED,
 };
 
@@ -71,6 +74,12 @@ device_variant match(std::string bl)
 			return G531BT;
 	} else if (bl.find("G531H") != std::string::npos) {
 			return G531H;
+        } else if (bl.find("T113") != std::string::npos) {
+                        return T113;
+        } else if (bl.find("T113NU") != std::string::npos) {
+                        return T113NU;
+        } else if (bl.find("T116") != std::string::npos) {
+                        return T116;
 	} else {
 			return DEVICE_UNSUPPORTED;
 	}
@@ -138,6 +147,19 @@ void vendor_load_properties()
 			property_override("ro.product.model", "SM-G531H");
 			property_override("ro.product.device", "grandprimeve3g");
 			break;
+		case T113:
+                        /* goyavewifi */
+		        property_set("ro.product.model", "SM-T113");
+        		property_set("ro.product.device", "goyavewifi");
+			break;
+		case T113NU:
+ 			/* goyavewifi */
+		        property_set("ro.product.model", "SM-T113NU");
+		        property_set("ro.product.device", "goyavewifi");
+		case T116:
+ 			/* goyave3g */
+		        property_set("ro.product.model", "SM-T116");
+		        property_set("ro.product.device", "goyave3g");
 		default:
 			break;
 	}
