@@ -38,25 +38,21 @@ std::string bootloader;
 std::string device;
 
 enum device_variant {
-	G360H,
-	G360HU,
-	G361H,
-	G531BT,
-	G531H,
+	T113,
+	T113NU,
+	T116,
 };
 
 device_variant match(std::string bl)
 {
-        if (bl.find("G360H") != std::string::npos) {
-                return G360H;
-        } else if (bl.find("G360HU") != std::string::npos) {
-                return G360HU;
-        } else if (bl.find("G361H") != std::string::npos) {
-                return G361H;
-        } else if (bl.find("G531BT") != std::string::npos) {
-                return G531BT;
+        if (bl.find("T113") != std::string::npos) {
+                return T113;
+        } else if (bl.find("T113NU") != std::string::npos) {
+                return T113NU;
+        } else if (bl.find("T116") != std::string::npos) {
+                return T116;
         } else {
-                return G531H;
+                return T113;
         }
 }
 
@@ -71,30 +67,17 @@ void vendor_load_properties()
 	device_variant variant = find_device_variant();
 
 	switch (variant) {
-		case G360H:
-		        /* core33gdd */
-		        property_set("ro.product.model", "SM-G360H");
-        		property_set("ro.product.device", "core33g");
+		case T113:
+		        property_set("ro.product.model", "SM-T113");
+        		property_set("ro.product.device", "goyavewifi");
 			break;
-		case G360HU:
-		        /* core33gdc */
-		        property_set("ro.product.model", "SM-G360HU");
-		        property_set("ro.product.device", "core33g");
+		case T113NU:
+		        property_set("ro.product.model", "SM-T113NU");
+		        property_set("ro.product.device", "goyavewifi");
 			break;
-		case G361H:
-		        /* coreprimeve3gxx */
-		        property_set("ro.product.model", "SM-G361H");
-		        property_set("ro.product.device", "coreprimeve3g");
-			break;
-		case G531BT:
-		        /* grandprimeve3gdtv */
-        		property_set("ro.product.model", "SM-G531BT");
-		        property_set("ro.product.device", "grandprimeve3gdtv");
-			break;
-		case G531H:
-		        /* grandprimeve3gxx */
-		        property_set("ro.product.model", "SM-G531H");
-		        property_set("ro.product.device", "grandprimeve3g");
+		case T116:
+		        property_set("ro.product.model", "SM-T116");
+		        property_set("ro.product.device", "goyave3g");
 			break;
 		default:
 			break;
