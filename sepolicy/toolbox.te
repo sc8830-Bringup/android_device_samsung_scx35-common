@@ -1,3 +1,5 @@
 allow toolbox media_device:dir { write add_name };
 allow toolbox media_device:fifo_file create;
 allow toolbox toolbox:capability dac_override;
+allow toolbox radio_device:dir { write add_name };
+allow toolbox radio_device:fifo_file create;
