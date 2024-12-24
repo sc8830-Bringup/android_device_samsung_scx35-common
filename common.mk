@@ -86,16 +86,14 @@ PRODUCT_PACKAGES += \
 	libsecril-client \
 	libsecril-shim \
 	libril \
-	rild \
-	modemd \
-	modem_control
+	rild
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.radio.modemtype=w \
 	rild.libpath=/system/vendor/lib/libsecril-shim.so
 
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/system/etc/init/rild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rild.rc
+#PRODUCT_COPY_FILES += \
+#	$(LOCAL_PATH)/system/etc/init/rild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rild.rc
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -121,8 +119,6 @@ PRODUCT_PACKAGES += \
 	gpsd.rc \
 	kill_phone.rc \
 	macloader.rc \
-	modem_control.rc \
-	modemd.rc \
 	nvitemd.rc \
 	phoneserver.rc \
 	refnotify.rc \
