@@ -149,17 +149,17 @@ void vendor_load_properties()
 			break;
 		case T113:
                         /* goyavewifi */
-		        property_set("ro.product.model", "SM-T113");
-        		property_set("ro.product.device", "goyavewifi");
+		        property_override("ro.product.model", "SM-T113");
+        		property_override("ro.product.device", "goyavewifi");
 			break;
 		case T113NU:
  			/* goyavewifi */
-		        property_set("ro.product.model", "SM-T113NU");
-		        property_set("ro.product.device", "goyavewifi");
+		        property_override("ro.product.model", "SM-T113NU");
+		        property_override("ro.product.device", "goyavewifi");
 		case T116:
  			/* goyave3g */
-		        property_set("ro.product.model", "SM-T116");
-		        property_set("ro.product.device", "goyave3g");
+		        property_override("ro.product.model", "SM-T116");
+		        property_override("ro.product.device", "goyave3g");
 		default:
 			break;
 	}
