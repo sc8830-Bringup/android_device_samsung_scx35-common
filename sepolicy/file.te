@@ -5,6 +5,7 @@ type proc_cpw, fs_type;
 type proc_cpt, fs_type;
 type sysfs_restart_cpc, fs_type, sysfs_type;
 type sysfs_dynamic_pclk, fs_type, sysfs_type;
+type sysfs_dmcfreq_set_freq, fs_type, sysfs_type;
 type at_distributor, exec_type;
 type modemd, exec_type;
 type nvitemd_exec, exec_type, file_type;
