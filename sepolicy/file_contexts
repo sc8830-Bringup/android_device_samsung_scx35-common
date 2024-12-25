@@ -64,7 +64,7 @@
 
 /data/system/gps(/\.*.*)?    u:object_r:gps_data_file:s0
 
-/system/bin/gpsd             u:object_r:gpsd_exec:s0
+/system/vendor/bin/gpsd             u:object_r:gpsd_exec:s0
 
 # GFX
 /dev/mali[0-9]*              u:object_r:gpu_device:s0
@@ -90,3 +90,6 @@
 # Sysfs
 /sys/devices/platform/sprd_fb.0/graphics/fb0/dynamic_pclk    u:object_r:sysfs_dynamic_pclk:s0
 /sys/devices/platform/scxx30-dmcfreq.0/devfreq/scxx30-dmcfreq.0/ondemand/set_freq  u:object_r:sysfs_dmcfreq_set_freq:s0
+
+# Power
+/system/vendor/bin/hw/android.hardware.power@1.0-service.sc8830                         u:object_r:hal_power_default_exec:s0

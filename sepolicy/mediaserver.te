@@ -9,5 +9,8 @@ allow mediaserver sysfs_wake_lock:file { read write open };
 allow mediaserver media_data_file:fifo_file { create read open setattr };
 allow mediaserver media_data_file:file { write open };
 allow mediaserver graphics_device:dir search;
+allow mediaserver graphics_device:chr_file { read open ioctl };
 allow mediaserver system_file:file execmod;
 allow mediaserver device:chr_file ioctl;
+allow mediaserver vendor_file:file execmod;
+allow mediaserver camera_data_file:file { read write open };
