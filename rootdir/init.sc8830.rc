@@ -67,6 +67,29 @@ on post-fs
     chown system system /productinfo
     chmod 0771 /productinfo
 
+# Permissions for user-made power HAL
+# Why "on post-fs"? The powerhal service fires up at "on boot".
+    chown system system /sys/devices/system/cpu/cpufreq/sprdemand/boost
+    chown system system /sys/devices/system/cpu/cpufreq/sprdemand/boostpulse
+    chown system system /sys/devices/system/cpu/cpufreq/sprdemand/io_is_busy
+
+    chown system system /sys/devices/system/cpu/cpufreq/interactive/boost
+    chown system system /sys/devices/system/cpu/cpufreq/interactive/boostpulse
+    chown system system /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
+
+    chown system system /sys/module/mali/parameters/mali_core_tarutil
+    chown system system /sys/module/mali/parameters/mali_core_minload
+    chown system system /sys/module/mali/parameters/mali_core_scaling
+    chown system system /sys/devices/virtual/dispc/dispc/fps
+
+#permissions for cpufreq
+    chown radio system /sys/power/cpufreq_min_limit
+    chown radio system /sys/power/cpufreq_max_limit
+    chown radio system /sys/power/cpufreq_table
+    chmod 0660 /sys/power/cpufreq_min_limit
+    chmod 0660 /sys/power/cpufreq_max_limit
+    chmod 0660 /sys/power/cpufreq_table
+
 on post-fs-data
     copy /system/etc/bluetooth/bt_stack.conf /data/misc/bluedroid/bt_stack.conf
     chown bluetooth system /data/misc/bluedroid/bt_stack.conf
@@ -325,14 +348,6 @@ on boot
     chown root root /system/lib/drm
     chmod 0775 /system/lib/drm
 # ]
-
-#permissions for cpufreq
-    chown radio system /sys/power/cpufreq_min_limit
-    chown radio system /sys/power/cpufreq_max_limit
-    chown radio system /sys/power/cpufreq_table
-    chmod 0660 /sys/power/cpufreq_min_limit
-    chmod 0660 /sys/power/cpufreq_max_limit
-    chmod 0660 /sys/power/cpufreq_table
 
 # permissions for cpuonline
     chown radio system /sys/devices/system/cpu/cpu0/online
