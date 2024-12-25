@@ -1,0 +1,4 @@
+allow hal_wifi_supplicant_default efs_file:dir search;
+allow hal_wifi_supplicant_default system_data_file:file { read open };
+
+dontaudit hal_wifi_supplicant_default system_data_file:file write;
