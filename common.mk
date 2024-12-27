@@ -133,7 +133,8 @@ PRODUCT_PACKAGES += \
 	init.wifi.rc \
 	init.sc8830.rc \
 	init.sc8830.usb.rc \
-	ueventd.sc8830.rc
+	ueventd.sc8830.rc \
+	init.logcat.rc
 
 # Packages
 PRODUCT_PACKAGES += \
