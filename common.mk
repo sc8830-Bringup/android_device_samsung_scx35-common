@@ -105,6 +105,7 @@ PRODUCT_PACKAGES += \
 # HWC
 PRODUCT_PACKAGES += \
 	libHWCUtils \
+	hwcomposer.sc8830 \
 	gralloc.sc8830 \
 	libmemoryheapion \
 	libion_sprd
