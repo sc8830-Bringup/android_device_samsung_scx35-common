@@ -23,7 +23,6 @@
 #include <hidl/Status.h>
 #include <hardware/power.h>
 
-
 extern "C" {
 void power_init(void);
 void power_hint(power_hint_t hint, void *data);

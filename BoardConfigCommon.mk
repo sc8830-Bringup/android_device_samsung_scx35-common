@@ -58,7 +58,7 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_IMAGE_NAME := zImage
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin
+KERNEL_TOOLCHAIN := $(shell pwd)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
@@ -106,4 +106,4 @@ PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed
 WITH_DEX_PREOPT_GENERATE_PROFILE := false
 
 # SELinux policy
-BOARD_SEPOLICY_DIRS += device/samsung/scx35-common/sepolicy
+#BOARD_SEPOLICY_DIRS += device/samsung/scx35-common/sepolicy

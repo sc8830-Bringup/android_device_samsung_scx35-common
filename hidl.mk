@@ -42,7 +42,7 @@ PRODUCT_PACKAGES += \
 
 # PowerHAL
 PRODUCT_PACKAGES += \
-	android.hardware.power@1.0-service.sc8830
+#	android.hardware.power@1.0-service.sc8830
 
 # Sensors
 PRODUCT_PACKAGES += \
